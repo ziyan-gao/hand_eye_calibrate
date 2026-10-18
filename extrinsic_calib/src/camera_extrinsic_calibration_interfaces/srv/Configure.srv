@@ -1,0 +1,10 @@
+int32 columns          # inner corners per row
+int32 rows             # inner corners per column
+float64 square_size_mm
+string mode            # eye_in_hand | eye_to_hand
+string session_name    # optional; empty -> timestamp
+---
+bool success
+string message
+int64 config_revision
+string session_id

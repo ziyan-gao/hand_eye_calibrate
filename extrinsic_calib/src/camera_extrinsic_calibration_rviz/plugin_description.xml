@@ -1,0 +1,7 @@
+<library path="camera_extrinsic_calibration_rviz">
+  <class name="camera_extrinsic_calibration_rviz/CalibrationPanel"
+         type="camera_extrinsic_calibration_rviz::CalibrationPanel"
+         base_class_type="rviz_common::Panel">
+    <description>Capture chessboard / robot pose pairs and solve camera extrinsics.</description>
+  </class>
+</library>

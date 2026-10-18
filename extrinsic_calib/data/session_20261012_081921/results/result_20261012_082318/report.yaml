@@ -1,0 +1,89 @@
+method: PARK
+opencv_version: 4.6.0
+time: 2026-10-12T08:22:28+0000
+session_id: session_20261012_081921
+config_revision: 1
+dataset_revision: 20
+config:
+  columns: 9
+  rows: 6
+  square_size_mm: 26.0
+  mode: eye_in_hand
+  board_origin: inner corner 0; outer square at corner 0 is dark
+  eef_definition: xArm TCP (controller TCP offset = parallel gripper TCP)
+  expected_tcp_offset_mm_rad: [0.0, 0.0, 172.0, 0.0, 0.0, 0.0]
+  intrinsics:
+    K:
+    - [913.0416259765625, 0.0, 635.2960815429688]
+    - [0.0, 911.223876953125, 355.0325622558594]
+    - [0.0, 0.0, 1.0]
+    D: [0.0, 0.0, 0.0, 0.0, 0.0]
+    width: 1280
+    height: 720
+    frame_id: camera_color_optical_frame
+    model: plumb_bob
+frames: {base: link_base, eef: link_tcp, camera_optical: camera_color_optical_frame}
+sample_ids: [s0001_d6c373, s0002_6710af, s0003_4768df, s0004_c86a54, s0005_38a44f,
+  s0006_9f9257, s0007_606f96, s0008_b9928c, s0009_ef9387, s0010_4da31b, s0011_49c0bd,
+  s0012_b2d16f, s0013_f3969a, s0014_dccf28, s0015_18562f, s0016_22cdb0, s0017_1adad8,
+  s0018_a86431, s0019_d0de5b, s0020_5b6a9d]
+reprojection_rms_px:
+  overall: 0.53951762732748
+  per_sample: {s0001_d6c373: 0.6462810994020464, s0002_6710af: 0.7412653625270621,
+    s0003_4768df: 0.4133333218729038, s0004_c86a54: 0.3665167329920899, s0005_38a44f: 0.5393814256629578,
+    s0006_9f9257: 0.4446462543217818, s0007_606f96: 0.4423214788536177, s0008_b9928c: 0.6634942751267019,
+    s0009_ef9387: 0.5762781584997287, s0010_4da31b: 0.5751816916909226, s0011_49c0bd: 0.5236073497003864,
+    s0012_b2d16f: 0.6147043826090632, s0013_f3969a: 0.5528917086224542, s0014_dccf28: 0.5331965227918561,
+    s0015_18562f: 0.32467886075056557, s0016_22cdb0: 0.7176599094772289, s0017_1adad8: 0.7121162240397709,
+    s0018_a86431: 0.48583605997536333, s0019_d0de5b: 0.3445983202156848, s0020_5b6a9d: 0.1935112190793197}
+hand_eye_consistency:
+  quantity: T_base_from_board (Y)
+  method: translation distance to mean translation; geodesic angle to chordal L2 mean
+    rotation on SO(3)
+  reference_mean:
+  - [0.9992751769669389, -0.03805088691837014, -0.0011183480759842795, -0.3181302169708512]
+  - [-0.03803712087189744, -0.9992214505924362, 0.010472349866417402, -0.26803494896324465]
+  - [-0.0015159595872889162, -0.010422220525080877, -0.9999445380549142, 0.010270399957409962]
+  - [0.0, 0.0, 0.0, 1.0]
+  trans_mm:
+    rms: 3.542912760628044
+    max: 6.143847390798154
+    per_sample: {s0001_d6c373: 4.415414300224977, s0002_6710af: 5.395652642622672,
+      s0003_4768df: 2.1635142388187822, s0004_c86a54: 2.014137685856238, s0005_38a44f: 3.2052433677746293,
+      s0006_9f9257: 4.466812995667991, s0007_606f96: 4.040278959396076, s0008_b9928c: 2.1090587648705754,
+      s0009_ef9387: 2.2214354210606397, s0010_4da31b: 2.588878984135747, s0011_49c0bd: 1.91546615274481,
+      s0012_b2d16f: 3.3316679543145424, s0013_f3969a: 4.7738052095784935, s0014_dccf28: 3.289840364269318,
+      s0015_18562f: 3.846566287329256, s0016_22cdb0: 3.697396671827553, s0017_1adad8: 3.549931887191875,
+      s0018_a86431: 1.9309005945062538, s0019_d0de5b: 0.371091376705459, s0020_5b6a9d: 6.143847390798154}
+  rot_deg:
+    rms: 0.8927389989983098
+    max: 1.9293661745630415
+    per_sample: {s0001_d6c373: 0.3638537698375433, s0002_6710af: 0.19700649337758155,
+      s0003_4768df: 1.0178129409825056, s0004_c86a54: 1.3543298774425798, s0005_38a44f: 0.8139851238219816,
+      s0006_9f9257: 0.6789427252820879, s0007_606f96: 0.8141540777837751, s0008_b9928c: 0.2898927466384756,
+      s0009_ef9387: 0.8745428666900307, s0010_4da31b: 0.2618626316139193, s0011_49c0bd: 0.2837027794439585,
+      s0012_b2d16f: 0.2746777394311734, s0013_f3969a: 0.4970017385116465, s0014_dccf28: 0.4337191347318458,
+      s0015_18562f: 1.8343763007222251, s0016_22cdb0: 0.9988527184405099, s0017_1adad8: 0.8341475413519743,
+      s0018_a86431: 0.7558532742435947, s0019_d0de5b: 1.9293661745630415, s0020_5b6a9d: 0.5012148325691359}
+  note: internal consistency only; not the absolute extrinsic error
+motion_check:
+  max_relative_rotation_deg: 78.23934424351197
+  max_axis_spread_deg: 89.9932388724393
+  warnings: []
+method_comparison:
+  reference: PARK
+  others:
+    TSAI: {ok: true, diff_trans_mm: 0.13955454894732616, diff_rot_deg: 0.08586135572542995,
+      consistency_trans_rms_mm: 3.5351377045786987}
+    PARK: {ok: true, diff_trans_mm: 0.0, diff_rot_deg: 5.7905745997743736e-06, consistency_trans_rms_mm: 3.542912760628044}
+    HORAUD: {ok: true, diff_trans_mm: 0.018012963919393297, diff_rot_deg: 0.007868717079122463,
+      consistency_trans_rms_mm: 3.5394322940211658}
+    ANDREFF: {ok: true, diff_trans_mm: 6.9378032616535865, diff_rot_deg: 0.0449893327463355,
+      consistency_trans_rms_mm: 2.6964262324499684}
+    DANIILIDIS: {ok: true, diff_trans_mm: 1.62951932926709, diff_rot_deg: 0.053924876389904966,
+      consistency_trans_rms_mm: 3.4491399731708845}
+  note: agreement is not proof of absolute accuracy
+warnings: ['methods [''ANDREFF''] differ from PARK by > 2.0 mm / 0.5 deg; check data/method']
+thresholds: {max_pair_dt_ms: 120.0, static_window_s: 1.0, static_trans_mm: 0.5, static_rot_deg: 0.1,
+  max_reproj_px: 2.0, min_rel_rot_deg: 10.0, min_axis_spread_deg: 20.0}
+tf: 'TF published: link_tcp -> camera_link (/tf_static)'

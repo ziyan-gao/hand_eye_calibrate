@@ -1,0 +1,6 @@
+string name        # optional result directory name
+bool overwrite
+---
+bool success
+string message
+string path

@@ -1,0 +1,7 @@
+string session_dir
+---
+bool success
+string message
+string session_id
+int64 config_revision
+int64 dataset_revision

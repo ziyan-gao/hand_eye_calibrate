@@ -1,0 +1,86 @@
+method: PARK
+opencv_version: 4.6.0
+time: 2026-10-02T13:43:50+0000
+session_id: session_20261002_134128
+config_revision: 1
+dataset_revision: 16
+config:
+  columns: 9
+  rows: 6
+  square_size_mm: 26.5
+  mode: eye_in_hand
+  board_origin: inner corner 0; outer square at corner 0 is dark
+  eef_definition: xArm TCP (controller TCP offset = parallel gripper TCP)
+  expected_tcp_offset_mm_rad: [0.0, 0.0, 172.0, 0.0, 0.0, 0.0]
+  intrinsics:
+    K:
+    - [385.5181884765625, 0.0, 323.0374450683594]
+    - [0.0, 385.1068420410156, 240.48068237304688]
+    - [0.0, 0.0, 1.0]
+    D: [-0.05732075124979019, 0.06588202714920044, -0.0007859166362322867, 0.00026030061417259276,
+      -0.021102746948599815]
+    width: 640
+    height: 480
+    frame_id: camera_color_optical_frame
+    model: plumb_bob
+frames: {base: link_base, eef: link_tcp, camera_optical: camera_color_optical_frame}
+sample_ids: [s0001_4ac88c, s0002_38052a, s0003_26e907, s0004_d36743, s0005_61f067,
+  s0006_83b5ea, s0007_247365, s0008_96a5c2, s0009_4710f0, s0010_c845dd, s0011_885fec,
+  s0012_cdb917, s0013_0953e4, s0014_bce4b9, s0015_0ee64f, s0016_a46e16]
+reprojection_rms_px:
+  overall: 0.1292425049385066
+  per_sample: {s0001_4ac88c: 0.21101207826492968, s0002_38052a: 0.14055534501173575,
+    s0003_26e907: 0.12032534888257192, s0004_d36743: 0.12060842925636289, s0005_61f067: 0.1120071323420328,
+    s0006_83b5ea: 0.12012241073426946, s0007_247365: 0.13997350397551933, s0008_96a5c2: 0.09573174693317964,
+    s0009_4710f0: 0.13186937132211826, s0010_c845dd: 0.10340710186403687, s0011_885fec: 0.14302721819382752,
+    s0012_cdb917: 0.14297368065351151, s0013_0953e4: 0.13590377340903795, s0014_bce4b9: 0.10217064686596136,
+    s0015_0ee64f: 0.1047640260643499, s0016_a46e16: 0.09671804241268336}
+hand_eye_consistency:
+  quantity: T_base_from_board (Y)
+  method: translation distance to mean translation; geodesic angle to chordal L2 mean
+    rotation on SO(3)
+  reference_mean:
+  - [0.011826145970306873, 0.9998120866362266, -0.015360133059397665, 0.44748252279128337]
+  - [0.999915956778471, -0.011906194386127316, -0.005130488771409203, -0.08590623623885245]
+  - [-0.005312405414008847, -0.015298168235222134, -0.9998688636003045, -0.0575998406102431]
+  - [0.0, 0.0, 0.0, 1.0]
+  trans_mm:
+    rms: 2.609818253176226
+    max: 5.2868856095600085
+    per_sample: {s0001_4ac88c: 1.9462323665259968, s0002_38052a: 1.2767521512420434,
+      s0003_26e907: 1.464998776110872, s0004_d36743: 1.120749356643175, s0005_61f067: 1.4051715056360168,
+      s0006_83b5ea: 3.5386282065332013, s0007_247365: 2.31026807166783, s0008_96a5c2: 1.5022343486397736,
+      s0009_4710f0: 1.9854971907716088, s0010_c845dd: 5.2868856095600085, s0011_885fec: 1.2649447592982626,
+      s0012_cdb917: 3.856865185018902, s0013_0953e4: 2.8473235246681092, s0014_bce4b9: 3.1666015438507467,
+      s0015_0ee64f: 2.0519068435845966, s0016_a46e16: 2.7118203746947995}
+  rot_deg:
+    rms: 0.29780520118883225
+    max: 0.6627819126125233
+    per_sample: {s0001_4ac88c: 0.3871027327312632, s0002_38052a: 0.13647981757006455,
+      s0003_26e907: 0.06296253980160109, s0004_d36743: 0.2514537161727343, s0005_61f067: 0.21425555170016736,
+      s0006_83b5ea: 0.2999624838732996, s0007_247365: 0.18303372414697108, s0008_96a5c2: 0.45410330373205304,
+      s0009_4710f0: 0.19508549833464714, s0010_c845dd: 0.6627819126125233, s0011_885fec: 0.18833371895233925,
+      s0012_cdb917: 0.23408025829395318, s0013_0953e4: 0.19673768634499658, s0014_bce4b9: 0.05428712481280698,
+      s0015_0ee64f: 0.3743410923227532, s0016_a46e16: 0.2415760002131216}
+  note: internal consistency only; not the absolute extrinsic error
+motion_check:
+  max_relative_rotation_deg: 117.6639192183108
+  max_axis_spread_deg: 89.96995690242399
+  warnings: []
+method_comparison:
+  reference: PARK
+  others:
+    TSAI: {ok: true, diff_trans_mm: 0.03527925948721994, diff_rot_deg: 0.03088353308404815,
+      consistency_trans_rms_mm: 2.600444587108159}
+    PARK: {ok: true, diff_trans_mm: 0.0, diff_rot_deg: 0.0, consistency_trans_rms_mm: 2.609818253176226}
+    HORAUD: {ok: true, diff_trans_mm: 0.034527677241494276, diff_rot_deg: 0.021829925908416172,
+      consistency_trans_rms_mm: 2.6101452101861584}
+    ANDREFF: {ok: true, diff_trans_mm: 4.548414829106202, diff_rot_deg: 0.04568623479392744,
+      consistency_trans_rms_mm: 2.7603997080719234}
+    DANIILIDIS: {ok: true, diff_trans_mm: 0.7543812484911038, diff_rot_deg: 0.06034719883969376,
+      consistency_trans_rms_mm: 2.590827067207782}
+  note: agreement is not proof of absolute accuracy
+warnings: ['methods [''ANDREFF''] differ from PARK by > 2.0 mm / 0.5 deg; check data/method']
+thresholds: {max_pair_dt_ms: 120.0, static_window_s: 1.0, static_trans_mm: 0.5, static_rot_deg: 0.1,
+  max_reproj_px: 2.0, min_rel_rot_deg: 10.0, min_axis_spread_deg: 20.0}
+tf: 'TF published: link_tcp -> camera_link (/tf_static)'

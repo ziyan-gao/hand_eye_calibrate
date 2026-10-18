@@ -1,0 +1,9 @@
+string request_id
+int64 expected_config_revision
+---
+bool success
+string message
+string sample_id
+int64 dataset_revision
+float64 reproj_rms_px
+float64 dt_ms

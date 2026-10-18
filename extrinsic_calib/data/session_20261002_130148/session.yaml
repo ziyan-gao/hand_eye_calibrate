@@ -1,0 +1,16 @@
+schema_version: 1
+session_id: session_20261002_130148
+config:
+  columns: 9
+  rows: 6
+  square_size_mm: 26.5
+  mode: eye_in_hand
+  board_origin: inner corner 0; outer square at corner 0 is dark
+  eef_definition: xArm TCP (controller TCP offset = parallel gripper TCP)
+  expected_tcp_offset_mm_rad: [0.0, 0.0, 172.0, 0.0, 0.0, 0.0]
+frames: {base: link_base, eef: gripper_tcp, camera_optical: camera_color_optical_frame}
+config_revision: 1
+dataset_revision: 0
+next_sequence: 1
+sample_index: []
+versions: {opencv: 4.6.0, numpy: 1.26.4, python: 3.12.3}

@@ -1,0 +1,29 @@
+schema_version: 1
+session_id: session_20261012_081921
+config:
+  columns: 9
+  rows: 6
+  square_size_mm: 26.0
+  mode: eye_in_hand
+  board_origin: inner corner 0; outer square at corner 0 is dark
+  eef_definition: xArm TCP (controller TCP offset = parallel gripper TCP)
+  expected_tcp_offset_mm_rad: [0.0, 0.0, 172.0, 0.0, 0.0, 0.0]
+  intrinsics:
+    K:
+    - [913.0416259765625, 0.0, 635.2960815429688]
+    - [0.0, 911.223876953125, 355.0325622558594]
+    - [0.0, 0.0, 1.0]
+    D: [0.0, 0.0, 0.0, 0.0, 0.0]
+    width: 1280
+    height: 720
+    frame_id: camera_color_optical_frame
+    model: plumb_bob
+frames: {base: link_base, eef: link_tcp, camera_optical: camera_color_optical_frame}
+config_revision: 1
+dataset_revision: 20
+next_sequence: 21
+sample_index: [s0001_d6c373, s0002_6710af, s0003_4768df, s0004_c86a54, s0005_38a44f,
+  s0006_9f9257, s0007_606f96, s0008_b9928c, s0009_ef9387, s0010_4da31b, s0011_49c0bd,
+  s0012_b2d16f, s0013_f3969a, s0014_dccf28, s0015_18562f, s0016_22cdb0, s0017_1adad8,
+  s0018_a86431, s0019_d0de5b, s0020_5b6a9d]
+versions: {opencv: 4.6.0, numpy: 1.26.4, python: 3.12.3}

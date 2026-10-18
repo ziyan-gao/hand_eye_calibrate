@@ -1,0 +1,103 @@
+Panels:
+  - Class: camera_extrinsic_calibration_rviz/CalibrationPanel
+    Name: Extrinsic Calibration
+    columns: 9
+    rows: 6
+    square_size_mm: 26.5
+    mode: eye_in_hand
+    method: PARK
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Value: /robot_description
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Show Names: true
+      Show Axes: true
+      Show Arrows: false
+      Marker Scale: 0.5
+      Frames:
+        All Enabled: false
+        link_base:
+          Value: true
+        link_tcp:
+          Value: true
+        camera_color_optical_frame:
+          Value: true
+        world:
+          Value: false
+        link1:
+          Value: false
+        link2:
+          Value: false
+        link3:
+          Value: false
+        link4:
+          Value: false
+        link5:
+          Value: false
+        link_eef:
+          Value: false
+        xarm_gripper_base_link:
+          Value: false
+        left_outer_knuckle:
+          Value: false
+        left_finger:
+          Value: false
+        left_inner_knuckle:
+          Value: false
+        right_outer_knuckle:
+          Value: false
+        right_finger:
+          Value: false
+        right_inner_knuckle:
+          Value: false
+        camera_link:
+          Value: false
+        camera_color_frame:
+          Value: false
+        camera_depth_frame:
+          Value: false
+        camera_depth_optical_frame:
+          Value: false
+        camera_infra1_frame:
+          Value: false
+        camera_infra1_optical_frame:
+          Value: false
+        camera_infra2_frame:
+          Value: false
+        camera_infra2_optical_frame:
+          Value: false
+        camera_accel_frame:
+          Value: false
+        camera_accel_optical_frame:
+          Value: false
+        camera_gyro_frame:
+          Value: false
+        camera_gyro_optical_frame:
+          Value: false
+        camera_imu_optical_frame:
+          Value: false
+  Global Options:
+    Fixed Frame: link_base
+    Frame Rate: 30
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 2
+Window Geometry:
+  Width: 1500
+  Height: 1000
+  Extrinsic Calibration:
+    collapsed: false

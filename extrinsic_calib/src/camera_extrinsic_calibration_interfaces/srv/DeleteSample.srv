@@ -1,0 +1,6 @@
+string sample_id   # "last" -> newest non-excluded sample
+---
+bool success
+string message
+string sample_id
+int64 dataset_revision

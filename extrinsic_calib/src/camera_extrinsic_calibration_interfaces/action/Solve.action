@@ -1,0 +1,9 @@
+string method                 # PARK (default) | TSAI | HORAUD | ANDREFF | DANIILIDIS
+int64 expected_dataset_revision
+---
+bool success
+string message
+CalibrationResult result
+---
+string stage
+float32 progress

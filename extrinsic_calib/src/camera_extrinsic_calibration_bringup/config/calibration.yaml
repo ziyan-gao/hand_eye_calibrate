@@ -1,0 +1,47 @@
+camera_extrinsic_calibration:
+  ros__parameters:
+    image_topic: /camera/camera/color/image_raw
+    camera_info_topic: /camera/camera/color/camera_info
+    robot_states_topic: /xarm/robot_states   # xarm5_driver default hw_ns = xarm
+    base_frame: link_base
+    eef_frame: link_tcp                      # xarm_description TCP link (with add_gripper)
+    board_frame: calibration_board
+    data_root: /data/calibration
+
+    # The EEF is the xArm TCP as reported in RobotMsg.pose. The controller TCP offset
+    # must be set to the parallel-gripper TCP (e.g. in UFACTORY Studio). Every capture
+    # compares RobotMsg.offset [x,y,z mm, r,p,y rad] against this value.
+    # 172 mm is the UFACTORY xArm Gripper default; CONFIRM for your gripper.
+    check_tcp_offset: true
+    expected_tcp_offset: [0.0, 0.0, 172.0, 0.0, 0.0, 0.0]
+    tcp_offset_tol_mm: 0.5
+    tcp_offset_tol_rad: 0.002
+
+    # Engineering starting values (spec 6.2), not validated acceptance thresholds.
+    capture_timeout_s: 2.0
+    # robot_states arrive at 5 Hz (report_type normal): the static window must contain
+    # >= 3 samples bracketing the image stamp; the nearest one may be up to ~100 ms away.
+    static_window_s: 1.0
+    max_pair_dt_ms: 120.0
+    freshness_s: 1.0
+    static_trans_mm: 0.5
+    static_rot_deg: 0.1
+    max_reproj_px: 2.0
+    min_rel_rot_deg: 10.0
+    min_axis_spread_deg: 20.0
+    method_disagreement_warn_mm: 2.0
+    method_disagreement_warn_deg: 0.5
+
+    # After Solve, publish <eef|base> -> camera_link on /tf_static (spec 9.2).
+    # camera_link -> optical comes from the RealSense driver and is composed in.
+    publish_tf: true
+
+    # Switch the xArm to manual (teaching) mode once the robot is healthy, so the
+    # operator can drag it. Requires correct TCP payload settings on the controller.
+    xarm_ns: /xarm
+    manual_mode_on_start: true
+    camera_link_frame: camera_link
+
+    preview_rate_hz: 10.0
+    preview_width: 640
+    status_rate_hz: 10.0

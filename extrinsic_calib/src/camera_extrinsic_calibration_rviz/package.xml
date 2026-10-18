@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>camera_extrinsic_calibration_rviz</name>
+  <version>0.1.0</version>
+  <description>RViz2 panel for camera extrinsic (hand-eye) calibration.</description>
+  <maintainer email="zhanghaolan7@gmail.com">Apple</maintainer>
+  <license>BSD-3-Clause</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
+  <depend>rviz_common</depend>
+  <depend>pluginlib</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>camera_extrinsic_calibration_interfaces</depend>
+  <depend>qtbase5-dev</depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+    <rviz_common plugin="${prefix}/plugin_description.xml"/>
+  </export>
+</package>

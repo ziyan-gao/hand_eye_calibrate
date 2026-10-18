@@ -1,0 +1,10 @@
+# VSCode local history
+.history/
+# ROS2 colcon artifacts
+build/
+install/
+log/
+# Python caches
+__pycache__/
+*.pyc
+.pytest_cache/
